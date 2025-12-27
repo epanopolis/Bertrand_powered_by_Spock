@@ -3,6 +3,8 @@ A classical first-order predical logic calculator with set theory.
 
 You can view the operation of this application at https://bertrand.euclidpanopolis.com.
 
+This is a python project set up in the flask framework with a javascript/html frontend (entirely designed by me; please note that web design is not my forte).  It was a learning project on how to write a programming language (which is really only a calculator at this time).  I wrote the scanner, parser, and lexer/evaluator entirely on my own.  Eventually, the core Spock language will be written entirely in webassembler.  Bertrand is the API and Spock is the language engine/JIT interpreter.
+
 Excuse my "newbie" first publication of a GitHub repository.
 
 1. Install the package and its subdirectories into a root directory named
