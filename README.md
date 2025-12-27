@@ -5,6 +5,8 @@ You can view the operation of this application at https://bertrand.euclidpanopol
 
 This is a python project set up in the flask framework with a javascript/html frontend (entirely designed by me; please note that web design is not my forte).  It was a learning project on how to write a programming language (which is really only a calculator at this time).  I wrote the scanner, parser, and lexer/evaluator entirely on my own.  Eventually, the core Spock language will be written entirely in webassembler.  Bertrand is the API and Spock is the language engine/JIT interpreter.
 
+Eventually, this API will integrate the operations used in set theory for the evaluation of set theoretical first-order proofs.
+
 Here is the latest release: https://github.com/epanopolis/Bertrand_powered_by_Spock/releases/tag/first_order_logic_calculator
 
 Here are some basic installation instructions:
