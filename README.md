@@ -15,15 +15,15 @@ Here are some basic installation instructions:
 
 3. Create an application file (e.g. app.py) in the same directory that contains bertrand and make sure it has the following import statement:
 
-"from bertrand import create_app".
+  "from bertrand import create_app".
 
-This will be the point of entry for your server which will run from home directory.
+  This will be the point of entry for your server which will run from the home directory.
 
 4. Make sure your application file has the following statements:
 
-app = create_app() 
+  app = create_app() 
 
-application = app
+  application = app
 
 Note that "app" is not referring to app.py (if this is what you named your wsgi startup file) but to an "app" identifier in the flask framework that is ultimately used to start a function in the package's __init__.py file in the first subdirectory of the bertrand package. 
 
