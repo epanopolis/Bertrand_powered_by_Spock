@@ -27,7 +27,7 @@ Here are some basic installation instructions:
 
   application = app
 
-Note that "app" is not referring to app.py (if this is what you named your wsgi startup file) but to an "app" identifier in the flask framework that is ultimately used to start a function in the package's __init__.py file in the first subdirectory of the bertrand package. 
+Note that "app" is not referring to app.py (if this is what you named your wsgi startup file) but to an "app" identifier in the flask framework that is used to identify the application's startup function in the package's __init__.py file in the first subdirectory of the bertrand package. 
 
 5. The application file does not need to be named "app" or "application" but a WSGI server will probably need to equate the name of the startup application with the name "application" in order to operate (at least if you are using passenger as the connection to your main server, such as NGiNX and/or Apache).
 
