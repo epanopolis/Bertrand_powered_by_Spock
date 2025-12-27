@@ -7,7 +7,9 @@ This is a python project set up in the flask framework with a javascript/html fr
 
 Excuse my "newbie" first publication of a GitHub repository.
 
-1. Install the package and its subdirectories into a root directory named
+Here are some basic installation instructions:
+
+1. Install the package release and its subdirectories into a root directory named
 "bertrand" and point your URI server to it.
 
 2. Create a WSGI server and configure it.
