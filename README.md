@@ -24,5 +24,7 @@ for using the system are in the input window of the user interface and available
 by way of links on the interface.
 
 0.1.0 First operational usage. 2025-10-05
+
 0.1.1 Operation of substitution. 2025-10-08
+
 0.1.2 Set containers and value binding. 2025-10-11
