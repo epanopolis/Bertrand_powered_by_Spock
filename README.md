@@ -9,13 +9,15 @@ Here is the latest release: https://github.com/epanopolis/Bertrand_powered_by_Sp
 
 Here are some basic installation instructions:
 
-1. Install the package release and its subdirectories into a root package directory named "bertrand" and point your URI server to the folder containing the package where you can install your wsgi server code.
+1. Install the package release and its subdirectories into a root package directory named "bertrand" and point your URI server to the folder containing the package where you can install your wsgi server code and which will be the package's home directory.
 
-2. Create a WSGI server and configure it.
+2. Create a WSGI server and configure it in the home directory.
 
-3. Create an application file in the same directory that contains bertrand and make sure it has the following import statement:
+3. Create an application file (e.g. app.py) in the same directory that contains bertrand and make sure it has the following import statement:
 
 "from bertrand import create_app".
+
+This will be the point of entry for your server which will run from home directory.
 
 4. Make sure your application file has the following statements:
 
@@ -23,7 +25,9 @@ app = create_app()
 
 application = app
 
-5. The application file does not need to be named "app" or "application" but a WSGI server will probably need those names in order to operate.
+Note that "app" is not referring to app.py (if this is what you named your wsgi startup file) but to an "app" identifier in the flask framework that is ultimately used to start a function in the package's __init__.py file in the first subdirectory of the bertrand package. 
+
+5. The application file does not need to be named "app" or "application" but a WSGI server will probably need to equate the name of the startup application with the name "application" in order to operate (at least if you are using passenger as the connection to your main server, such as NGiNX and/or Apache).
 
 6. Start up the server and you are ready to log-in to your URI.  Instructions for using the system are in the left window of the user interface and available by way of link called "Lexicon".
 
