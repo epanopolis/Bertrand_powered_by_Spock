@@ -1,0 +1,194 @@
+        /* Style for the container that holds all page contents */
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: wheat;
+        }
+
+        /* CSS for the name at the top */
+        header {
+            margin: 0;
+            text-align: center;
+        }
+        
+        .top-name {
+            font-size: 8vh;
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Flex container for the left and center windows */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            gap: 5vh; /* Space between windows */
+            align-items: center;
+            justify-content: center;
+            height: 75vh;
+            width: 100%;
+        }
+
+        /* Style for the left window */
+        .left-window {
+            width: 30vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            border: 4px solid tan;
+            color: black;
+            box-sizing: border-box;
+            border-radius: 20px; /* Rounded corners */
+            overflow: hidden;
+        }
+
+        /* Style for the centered square */
+        .square-window {
+            width: 60vw;
+            height: 50%;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            border: 2px solid tan;
+            color: black;
+            box-sizing: border-box;
+            border-radius: 20px; /* Rounded corners */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        /* Style for lower window */
+        .lower-window {
+            width: 60vw;
+            height: 50%;
+            background-color: wheat;
+            border: 4px solid tan;
+            color: blue;
+            box-sizing: border-box;
+            border-radius: 20px;
+            overflow-y: auto;
+            padding: 15px;
+            font-size: 15px;
+        }
+
+        /* Input field style */
+        .text-input {
+            width: 100%;
+            height: 100%;
+            background-color: wheat;
+            font-size: 15px;
+            padding: 15px;
+            border: 2px solid tan;
+            resize: none; /* Prevent resizing */
+            box-sizing: border-box;
+            border-radius: 20px; /* Rounded corners for the input */
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: purple;
+        }
+        
+        .text-input::placeholder {
+            text-align: justify;
+            color: grey;
+            font-family: Arial, sans-serif;
+            white-space: normal;
+        }
+
+        /* Style for the full-screen toggle button at the bottom */
+        .bottom-button {
+            text-align: center;
+            background-color: wheat;
+            border: 2px solid tan;
+            padding: 3px;
+            cursor: pointer;
+            border-radius: 8px; /* Optional rounded corners for the button */
+            font-size: 14px;
+        }
+        
+        /* Flex container for the footer buttons */
+        footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 10px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            width: 100%;
+        }
+        
+        .flashes {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .flashes li {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        a:visited {
+            color: red;
+            text-decoration: none;
+        }
+        
+        a {
+            color: blue;
+            text-decoraton: none;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: black;
+        }
+        
+        td button {
+            all: unset; /* Reset all button styles */
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            background-color: wheat;
+            border: 2px solid tan;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        td button:hover {
+            background-color: brown;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        td button:active {
+            transform: scale(0.95);
+        }
