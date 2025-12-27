@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <title>Bertrand</title>
+</head>
+<body>
+    <header>
+    <div class="top-name">Bertrand, 
+        <span style="font-size: small"><i>powered by Spock</i></span></div>
+    </header>
+    <main id="content">{% block content %}{% endblock %}</main>
+    <script src="{{ url_for('static', filename='objects.js') }}"></script>
+</body>
+</html>

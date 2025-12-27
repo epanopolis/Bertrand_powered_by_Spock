@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Container holding both left and center windows -->
+    <div class="main-container">
+        <!-- Left window with a table -->
+        <div class="left-window">
+            <div class="table-container">
+                <h3 style="text-align: center">Shortcut to the 
+                    <a href="https://docs.google.com/document/d/1AL-e6kDW-WDfOPh98ILgbEgE741ypoTJ5eXqkOCKgW0/edit?usp=sharing"
+                        target="_blank" rel="noopener noreferrer"
+                        style="text-decoration: none;">Lexicon
+                    </a>
+                </h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><!--<button onclick="insertAtCursor('Σ')">&#x03A3; (sum)</button>--><button>(---)</button></td>
+                            <td><button onclick="insertAtCursor('⊤')">&#x22A4; (ttt)</button></td>
+                            <td><button onclick="insertAtCursor('⊥')">&#x22A5; (fff)</button></td>
+                            <td><button onclick="insertAtCursor('∈')">&#x2208; (mem)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insertAtCursor('∅')">&#x2205; (nul)</button></td>
+                            <td><button onclick="insertAtCursor('¬')">&#x00AC; (not)</button></td>
+                            <td><button onclick="insertAtCursor('∃')">&#x2203; (eee)</button></td>
+                            <td><button onclick="insertAtCursor('∀')">&#x2200; (all)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insertAtCursor('∧')">&#x2227; (con)</button></td>
+                            <td><button onclick="insertAtCursor('∨')">&#x2228; (dis)</button></td>
+                            <td><button onclick="insertAtCursor('→')">&#x2192; (imp)</button></td>
+                            <td><button onclick="insertAtCursor('↔')">&#x2194; (iff)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insertAtCursor('≡')">&#x2261; (eqv)</button></td>
+                            <td><button onclick="insertAtCursor('⨁')">&#x2A01; (exd)</button></td>
+                            <td><button onclick="insertAtCursor('↓')">&#x2193; (nor)</button></td>
+                            <td><button onclick="insertAtCursor('↑')">&#x2191; (nan)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insertAtCursor('φ')">&#x03C6; (phi)</button></td>
+                            <td><button onclick="insertAtCursor('ϕ')">&#x03D5; (Phi)</button></td>
+                            <td><button onclick="insertAtCursor('ψ')">&#x03C8; (psi)</button></td>
+                            <td><!--<button onclick="insertAtCursor('∈')">&#x2208; (set)</button>--><button>(---)</button></td>
+                        </tr>
+                        <tr>
+                            <td><!--<button onclick="insertAtCursor('⊆')">&#x2286; (inc)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('⊂')">&#x2282; (src)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('∩')">&#x2229; (int)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('∪')">&#x222A; (uni)</button>--><button>(---)</button></td>
+                        </tr>
+                        <tr>
+                            <td><!--<button onclick="insertAtCursor('∆')">&#x2206; (sym)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('𝒫')">&#x1D4AB; (PPP)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('×')">&#x00D7; (xxx)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('ℐ')">&#x2110; (idt)</button>--><button>(---)</button></td>
+                        </tr>
+                        <tr>
+                            <td><!--<button onclick="insertAtCursor('⚬')">&#x26AC; (cir)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('𝔇')">&#x1D507; (dom)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('ℛ')">&#x211B; (ran)</button>--><button>(---)</button></td>
+                            <td><!--<button onclick="insertAtCursor('ℱ')">&#x2131; (fld)</button>--><button>(---)</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div display="block" style="height: 100%">
+            <!-- Central window with text input -->
+            <div class="square-window">
+                <textarea class="text-input" id="textInput"></textarea>
+            </div>
+            <!-- Lower window with text output -->
+            <div class="lower-window">
+                <span id="reportContent"></span>
+            </div>
+        </div>
+    </div>
+    <footer style="gap: 55vh">
+            <div style="width: 30vh; margin-right: 0; margin-left: 5.5%">
+                <!-- Upload and calculate text button -->
+                <form>
+                    <button type="button" class="bottom-button" id="uploadButton">Upload Text / Calculate</button>
+                    <input type="file" id="fileInput" name="file" style="display: none" accept=".txt">
+                </form>
+            </div>
+            <div style="width: 85vh; margin-right: 8%">
+                <!-- Save input button -->
+                <button type="button" class="bottom-button" id="saveInput">Save Input</button>
+
+                <!-- Save output button -->
+                <button type="button" class="bottom-button" id="saveOutput">Save Output</button>
+                
+                <!-- Clear windows button -->
+                <button type="button" class="bottom-button" onclick="clearOutput()">Clear/Reset</button>
+
+                <!-- Full-screen toggle button -->
+                <button id="fullscreenButton" class="bottom-button" onclick="toggleFullScreen()">Full Screen</button>
+            </div>
+    </footer><br>
+        <div style="display: fixed" id="message">
+{% endblock %}
